@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="wani.css">
+      <link rel="stylesheet" href="imag.css">
+
+      <title>Billi - Birthday Special</title>
+      
+  </head>
+  <body class="bg-custom">
+      <nav class="navbar navbar-expand-lg navbar-light bg-custom ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Treasure Hunt</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="wani.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="clues.html">Gallery</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    
+
+    <div class="container">
+      <div class="row ">
+        <div class="col-md-7">
+          <video width="520" height="510" controls>
+            <source src="wani_bday/anu1.mp4" type="video/mp4">
+            <source src="wani_bday/anu1.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="col-md-5 ">
+          <br>
+          <label style="font-size: 24px;font-weight: bold; font-style: italic; color: gold;">
+            kabhi khushi kabhi gum<br>
+            Saath rahenge hum<br>
+          </label><br><br>
+            <label class="label1">Solve the Riddle!</label>
+            <br><br>
+            <form id="form1">
+                <label for="ans3" style="font-weight: bold; font-style: italic; color: black;">
+              
+                Galiyaan bhi deta hu,<br>
+                Majak bhi udaata hu,<br>
+                Aur Mehnat(Yoga) bhi jee tod krta hu,<br>
+                Isliye to mai apne baby ka babu hun!<br>
+
+                </label><br><br>
+                <input type="text" name="ans3" id="ans3" placeholder="Enter the clue" required/>
+                <button id="submit" type="submit" class="btn btn-success" style="margin-left: 10px;">Let's Go</button>
+                <span role="alert" id="nameError" aria-hidden="true">
+                    Please enter the right clue
+                </span>
+                <span role="alert" id="nameCheckError" aria-hidden="true">
+                  Please enter the right clue
+                </span>
+            </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const submit = document.getElementById("submit");
+
+      submit.addEventListener("click", validate);
+
+      function validate(e) {
+      e.preventDefault();
+
+      const ans3 = document.getElementById("ans3");
+      let valid = true;
+      
+      if(ans3.value=="asis" || ans3.value=="ashish"){
+        window.location.href="asis.html";
+      }
+      else if(ans3.value!="asis" || ans3.value!="ashish"){
+        const nameCheckError = document.getElementById("nameCheckError");
+        nameCheckError.classList.add("visible");
+        ans1.classList.add("invalid");
+        nameCheckError.setAttribute("aria-hidden", false);
+        nameCheckError.setAttribute("aria-invalid", true);
+      }
+      else if(!ans3.value) {
+          const nameError = document.getElementById("nameError");
+          nameError.classList.add("visible");
+          ans1.classList.add("invalid");
+          nameError.setAttribute("aria-hidden", false);
+          nameError.setAttribute("aria-invalid", true);
+          
+      }
+      
+      
+    }
+
+  </script>
+
+  </body>
+</html>

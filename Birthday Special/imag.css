@@ -1,0 +1,49 @@
+.imager{
+    width: 520px;
+    height: 557px;
+}
+
+.imager1{
+    width: 300px;
+    height: 357px;
+  }
+
+  .imager2{
+    width: 615px;
+    height: 370px;
+    justify-content: space-between;
+    margin-bottom: auto;
+  }
+
+  .imager3{
+      width: 520px;
+      height: 457px;
+  }
+
+  .imager4{
+      width: 520px;
+      height: 457px;
+  }
+
+#nameError {
+      display: none;
+      font-size: 0.8em;
+}
+
+#nameError.visible {
+      display: block;
+}
+
+input.invalid {
+      border-color: red;
+}
+
+#nameCheckError{
+display: none;
+      font-size: 0.8em;
+}
+
+#nameCheckError.visible{
+display: block;
+}
+

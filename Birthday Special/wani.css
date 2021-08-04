@@ -1,0 +1,39 @@
+
+.bg-custom{
+    /* background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%); */
+    background: linear-gradient(40deg,#ff6ec4,#7873f5) !important;
+}
+
+
+.bt-pad{
+    padding-top: 140px;
+    padding-left: 10px;
+}
+
+.label1{
+    font-family:"Euclid Fraktur", cursive, fantasy, serif;
+    font-size: 24px;
+    color:aqua;
+    padding-left: 40px;
+}
+
+.label2{
+    font-family:"Euclid Fraktur", cursive, fantasy, serif;
+    font-size: 24px;
+    color:aqua;
+
+}
+
+.underline{
+    font-family:"Euclid Fraktur", "Old English Text MT", fantasy, serif;
+    font-size: 48px;
+    text-decoration: none;
+    color: teal;
+    padding-left: 120px;
+}
+
+.label{
+    font-family:"Euclid Fraktur", cursive, fantasy, serif;
+    font-size: 24px;
+    color:aqua
+  }
