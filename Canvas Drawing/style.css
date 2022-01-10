@@ -1,0 +1,21 @@
+
+html,body{
+    margin: 0;
+    background: rgb(253, 253, 253);
+}
+h1{
+    text-align:center;
+    color:hsl(176, 25%, 25%);
+    margin-top: 0px;
+    background: deepskyblue;
+    height: 44px;
+}
+#draw{
+    /* border:2px solid darkslategrey; */
+    border: 1px solid black;
+    margin-left: 10px;
+    margin-top: -21px;
+    margin-bottom: -15px;;
+    width: 1326px;
+    height: 572px;
+}
