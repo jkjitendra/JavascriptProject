@@ -1,0 +1,92 @@
+html {
+    box-sizing: border-box;
+    background: darkslategray;
+    font-size: 20px;
+    
+  }
+  
+  body {
+    margin: 0;
+  }
+ 
+   *, *:before, *:after {
+    box-sizing: inherit;
+  }
+    /* Outer body:- Suppose Frame for a panel */
+  .panels {
+    min-height: 100vh;
+    overflow: hidden;
+    border: 1px solid rgb(0, 132, 255);
+    display: flex;
+  }
+    /* Creates separate panels inside the frame panel with some set of values  */
+  .panel {
+    background: #9810e2;
+    box-shadow: inset 0 0 0 5px rgba(255,255,255,0.1);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    align-items: center;
+    transition:
+      font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+      flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+      background 0.2s;
+    font-size: 20px;
+    font-weight: 200;
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+    border: 1px solid rgb(0, 102, 255);
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  } 
+
+  .panel1 { background-image:url('./bg1.jpeg'); }
+  .panel2 { background-image:url('./bg2.jpeg'); color:rgb(136, 255, 0)}
+  .panel3 { background-image:url('./bg3.jpeg'); }
+  .panel4 { background-image:url('./bg4.jpeg'); color:rgb(136, 255, 0)}
+  .panel5 { background-image:url('./bg5.jpeg'); }
+
+  /* Flex Items -> (    text)*/
+   .panel > * {
+    margin: 0;
+    width: 100%;
+    transition: transform 0.5s;
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .panel > *:first-child { transform: translateY(-100%); }         /* moving the content upwards to make it hidden */
+  .panel > *:last-child { transform: translateY(100%); }           /* moving the content downwards to make it hidden */
+
+  /* Applied through Javascript */
+  .panel.open-active > *:first-child { transform: translateY(0); } /* moving the content downwards to make it visible */
+  .panel.open-active > *:last-child { transform: translateY(0); }  /* moving the content upwards to make it visible */
+
+  /* Text inside every panel */
+  .panel p {
+    text-transform: uppercase;
+    font-family: 'Amatic SC', cursive;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+    font-size: 2em;
+    font-weight: 800;
+    
+  }
+  /* In all Panel:- Panel-> paragraph -> 2nd Child */
+  .panel p:nth-child(2) {
+    font-size: 4em;
+  }
+  /* Applied through Javascript */
+  .panel.open {
+    flex: 5;
+    font-size: 40px;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .panel p {
+      font-size: 1em;
+    }
+  } 
